@@ -1,0 +1,22 @@
+{
+  "forwardPorts": [
+    9000
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "2.15.12"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12.1",
+      "installTools": false,
+      "optimize": true
+    },
+    "ghcr.io/devcontainers-contrib/features/bash-command:1": {
+      "command": "sudo apt update && sudo apt install -y enchant"
+    },
+    "ghcr.io/eliises/devcontainer-features/bash-profile:1": {
+      "file": "$_CONTAINER_USER_HOME/.bashrc",
+      "command": "[ -d \\$HOME/.scripts ] && export PATH=\\$PATH:\\$HOME/.scripts; [ -f \\$HOME/.bash_aliases ] && . \\$HOME/.bash_aliases; [ -f \\$HOME/.bash_functions ] && . \\$HOME/.bash_functions;"
+    }
+  },
+}
